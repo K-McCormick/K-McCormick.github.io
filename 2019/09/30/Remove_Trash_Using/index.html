@@ -7,7 +7,7 @@
 
 
 
-<title>Category | Discardim</title>
+<title>Remove Trash Using | Discardim</title>
 
 
 
@@ -136,47 +136,144 @@
     }
 </script>
         <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Remove Trash Using</h1>
             
-
-
-
-    <div class="container">
-        <div class="post-wrap categories">
-            <h2 class="post-title">-&nbsp;Categories&nbsp;-</h2>
-            <div class="categories-card">
-                
+                <div class="post-meta">
                     
-                    <div class="card-item">
-                        <div class="categories">
-                            <a href="/categories/维护/">
-                                <h3>
-                                    <i class="iconfont icon-category" style="padding-right:3px"></i>
-                                    维护
-                                </h3>
-                            </a>
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 30, 2019&nbsp;&nbsp;22:47:41</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
                             
-                                
-                                
-                                    <article class="archive-item">
-                                        <a class="archive-item-link" href="/2019/09/21/Remove_Time_machine_Backup/">Remove Time Machine Backup</a>
-                                    </article>
-                                
+                                <a href="/categories/维护/">维护</a>
                             
-                                
-                                
-                                    <article class="archive-item">
-                                        <a class="archive-item-link" href="/2019/09/30/Remove_Trash_Using/">Remove Trash Using</a>
-                                    </article>
-                                
-                            
-                            
-                        </div>
-                    </div>
-                
-            </div>
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="清倒废纸篓-不能完成此操作-因为项目“”正在使用中"><a href="#清倒废纸篓-不能完成此操作-因为项目“”正在使用中" class="headerlink" title="清倒废纸篓:不能完成此操作,因为项目“”正在使用中"></a>清倒废纸篓:不能完成此操作,因为项目“”正在使用中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -s rm -rf /path</span><br></pre></td></tr></table></figure>
+
 
         </div>
-    </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Mac/"># Mac</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2019/09/21/Remove_Time_machine_Backup/">Remove Time Machine Backup</a>
+            
+        </section>
+
+
+    </article>
+</div>
 
         </div>
         <footer id="footer" class="footer">
