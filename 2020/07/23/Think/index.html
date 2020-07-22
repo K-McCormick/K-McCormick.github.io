@@ -9,7 +9,7 @@
 
 
 
-<title>New Beginning | Discardim</title>
+<title>Think | Discardim</title>
 
 
 
@@ -141,25 +141,87 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">New Beginning</h1>
+            <h1 class="post-title">Think</h1>
             
                 <div class="post-meta">
                     
 
                     
                         <span class="post-time">
-                        Date: <a href="#">June 14, 2020&nbsp;&nbsp;3:04:02</a>
+                        Date: <a href="#">July 23, 2020&nbsp;&nbsp;3:41:09</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/OJ/">OJ</a>
+                                <a href="/categories/Philosophy/">Philosophy</a>
                             
                         </span>
                     
@@ -168,8 +230,29 @@
         </header>
 
         <div class="post-content">
-            <blockquote>
-<p>今天开始在Codeforces和洛谷上写题<br>开始记录写题日记<br><a href="https://codeforces.com/profile/Discardim" target="_blank" rel="noopener">Codeforces</a><br><a href="https://www.luogu.com.cn/user/352767" target="_blank" rel="noopener">洛谷</a></p>
+            <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><blockquote>
+<p>通过言语传递的信息往往是片面的。</p>
+</blockquote>
+<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><blockquote>
+<p>没有反对声音的提议，无论支持与反对，都应警惕。</p>
+</blockquote>
+<h4 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h4><blockquote>
+<p>勿盲目寄希望于他人，他人即地狱。</p>
+</blockquote>
+<h4 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h4><blockquote>
+<p>对错的界限愈来愈模糊，多角度，多思考，是目前最好的解决办法。</p>
+</blockquote>
+<h4 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h4><blockquote>
+<p>对团队的忠心与对团队的贡献关系很小。</p>
+</blockquote>
+<h4 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h4><blockquote>
+<p>偏激及绝对的言论，大多是主观判断。</p>
+</blockquote>
+<h4 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h4><blockquote>
+<p>警惕外力影响及恶意煽动，保持怀疑，寻找真实的最好途径是寻找原始意图。</p>
+</blockquote>
+<h4 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h4><blockquote>
+<p>庞大的东西对个体的威胁虽然不明显，但隐患依然存在且不容忽视，例如：政府，民族主义。</p>
 </blockquote>
 
         </div>
@@ -194,7 +277,9 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/OJ/"># OJ</a>
+                        <a href="/tags/Philosophy/"># Philosophy</a>
+                    
+                        <a href="/tags/Think/"># Think</a>
                     
                         
                 </span>
@@ -207,10 +292,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/07/23/Think/">Think</a>
             
-            
-            <a class="next" rel="next" href="/2019/10/15/Hope.Despair/">希望，绝望</a>
+            <a class="next" rel="next" href="/2020/06/14/New_Beginning/">New Beginning</a>
             
         </section>
 
