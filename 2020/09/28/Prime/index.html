@@ -9,7 +9,7 @@
 
 
 
-<title>有点难过 | Discardim</title>
+<title>线性筛 | Discardim</title>
 
 
 
@@ -141,25 +141,87 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">有点难过</h1>
+            <h1 class="post-title">线性筛</h1>
             
                 <div class="post-meta">
                     
 
                     
                         <span class="post-time">
-                        Date: <a href="#">September 25, 2020&nbsp;&nbsp;0:48:31</a>
+                        Date: <a href="#">September 28, 2020&nbsp;&nbsp;21:49:33</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Diary/">Diary</a>
+                                <a href="/categories/Algorithm/">Algorithm</a>
                             
                         </span>
                     
@@ -168,9 +230,8 @@
         </header>
 
         <div class="post-content">
-            <blockquote>
-<p>&emsp;&emsp;早上在要醒的时候，朦胧中却听到了很清晰的龙与虎的OST：優しさの足音，仿佛一切都回到了龙儿遇见大河的那个早晨，一切都还没开始的那个时刻。<br>&emsp;&emsp;青春早就离我远去了，一回想起美好的事物，感到快乐的同时也会对比下自己也会让人黯然神伤。我的青春，大多数人的青春，什么都没有的青春。</p>
-</blockquote>
+            <h3 id="欧拉筛-线性筛"><a href="#欧拉筛-线性筛" class="headerlink" title="欧拉筛/线性筛"></a>欧拉筛/线性筛</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">bool isPrime[100000010];</span><br><span class="line">int Prime[6000010],cnt = 0;</span><br><span class="line"></span><br><span class="line">void GetPrime(int n)</span><br><span class="line">&#123;</span><br><span class="line">    memset(isPrime,1,sizeof(isPrime));</span><br><span class="line">    isPrime[1]=0;</span><br><span class="line">    <span class="keyword">for</span>(int i=2;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(isPrime[i])</span><br><span class="line">            Prime[++cnt]=i;</span><br><span class="line">        <span class="keyword">for</span>(int j=1; j&lt;=cnt&amp;&amp;i*Prime[j]&lt;=n;j++) </span><br><span class="line">        &#123;</span><br><span class="line">            isPrime[i*Prime[j]] = 0;</span><br><span class="line">            <span class="keyword">if</span>(i % Prime[j] == 0)</span><br><span class="line">                <span class="built_in">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
 
@@ -194,7 +255,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Daily/"># Daily</a>
+                        <a href="/tags/Algorithm/"># Algorithm</a>
                     
                         
                 </span>
@@ -207,10 +268,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/09/28/Prime/">线性筛</a>
             
-            
-            <a class="next" rel="next" href="/2020/07/23/Think/">Think</a>
+            <a class="next" rel="next" href="/2020/09/25/Daily/">有点难过</a>
             
         </section>
 
