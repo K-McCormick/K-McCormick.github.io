@@ -9,7 +9,7 @@
 
 
 
-<title>Data structure | Discardim</title>
+<title>自我认知 | Discardim</title>
 
 
 
@@ -141,87 +141,25 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Data structure</h1>
+            <h1 class="post-title">自我认知</h1>
             
                 <div class="post-meta">
                     
 
                     
                         <span class="post-time">
-                        Date: <a href="#">October 2, 2020&nbsp;&nbsp;13:24:19</a>
+                        Date: <a href="#">October 22, 2020&nbsp;&nbsp;20:18:52</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Data-structure/">Data structure</a>
+                                <a href="/categories/Philosophy/">Philosophy</a>
                             
                         </span>
                     
@@ -230,9 +168,9 @@
         </header>
 
         <div class="post-content">
-            <h3 id="顺序容器"><a href="#顺序容器" class="headerlink" title="顺序容器"></a>顺序容器</h3><p>vector:从后面快速的插入与删除，直接访问任何元素<br>deque:从前面或后面快速的插入与删除，直接访问任何元素<br>list:双链表，从任何地方快速插入与删除</p>
-<h3 id="关联容器"><a href="#关联容器" class="headerlink" title="关联容器"></a>关联容器</h3><p>set:快速查找，不允许重复值<br>multiset:快速查找，允许重复值<br>map:一对多映射，基于关键字快速查找，不允许重复值<br>multimap:一对多映射，基于关键字快速查找，允许重复值</p>
-<h3 id="容器适配器"><a href="#容器适配器" class="headerlink" title="容器适配器"></a>容器适配器</h3><p>stack:后进先出<br>queue:先进先出<br>priority_queue:最高优先级元素总是第一个出列</p>
+            <blockquote>
+<p>&emsp;&emsp;我注定是要独自一人生存的，生存在孤独中。<br>&emsp;&emsp;对有点好感的人便会亲近到让他人厌烦自己，我就是这样的人，与其被更多人讨厌，还不如永远不要去接触别人。<br>&emsp;&emsp;很久前就懂得的道理，却在最近一年早已忘却，写下这篇日记以警示自己：“别和任何人交流，你只会碍事，没有用的家伙，没有人需要你，放弃你的幻想。”</p>
+</blockquote>
 
         </div>
 
@@ -256,9 +194,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Data-structure/"># Data structure</a>
-                    
-                        <a href="/tags/List/"># List</a>
+                        <a href="/tags/Think/"># Think</a>
                     
                         
                 </span>
@@ -271,10 +207,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/10/22/Nobody_like_me/">自我认知</a>
             
-            
-            <a class="next" rel="next" href="/2020/09/29/Just_game/">Just game</a>
+            <a class="next" rel="next" href="/2020/10/02/Data_structure/">Data structure</a>
             
         </section>
 
