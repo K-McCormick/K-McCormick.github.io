@@ -9,7 +9,7 @@
 
 
 
-<title>Data structure | Discardim</title>
+<title>Link | Discardim</title>
 
 
 
@@ -141,87 +141,25 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Data structure</h1>
+            <h1 class="post-title">Link</h1>
             
                 <div class="post-meta">
                     
 
                     
                         <span class="post-time">
-                        Date: <a href="#">October 2, 2020&nbsp;&nbsp;13:24:19</a>
+                        Date: <a href="#">March 22, 2021&nbsp;&nbsp;18:09:41</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Data-structure/">Data structure</a>
+                                <a href="/categories/Link/">Link</a>
                             
                         </span>
                     
@@ -230,9 +168,10 @@
         </header>
 
         <div class="post-content">
-            <h3 id="顺序容器"><a href="#顺序容器" class="headerlink" title="顺序容器"></a>顺序容器</h3><p>vector:从后面快速的插入与删除，直接访问任何元素<br>deque:从前面或后面快速的插入与删除，直接访问任何元素<br>list:双链表，从任何地方快速插入与删除</p>
-<h3 id="关联容器"><a href="#关联容器" class="headerlink" title="关联容器"></a>关联容器</h3><p>set:快速查找，不允许重复值<br>multiset:快速查找，允许重复值<br>map:一对多映射，基于关键字快速查找，不允许重复值<br>multimap:一对多映射，基于关键字快速查找，允许重复值</p>
-<h3 id="容器适配器"><a href="#容器适配器" class="headerlink" title="容器适配器"></a>容器适配器</h3><p>stack:后进先出<br>queue:先进先出<br>priority_queue:最高优先级元素总是第一个出列</p>
+            <p>Void Particle</p>
+<blockquote>
+<p><a href="47.95.133.71">CodeServers</a><br><a href="8.131.56.76:8081" target="_blank" rel="noopener">OJ</a></p>
+</blockquote>
 
         </div>
 
@@ -256,9 +195,9 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Data-structure/"># Data structure</a>
+                        <a href="/tags/OJ/"># OJ</a>
                     
-                        <a href="/tags/List/"># List</a>
+                        <a href="/tags/Link/"># Link</a>
                     
                         
                 </span>
@@ -270,8 +209,6 @@
             </div>
         </section>
         <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/2020/10/22/Nobody_like_me/">自我认知</a>
             
             
             <a class="next" rel="next" href="/2020/09/29/Just_game/">Just game</a>
